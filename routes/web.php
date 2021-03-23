@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Top
+Route::get('/', 'HomeController@index')->name('home');
+
 // folder関連
 Route::get('/folders/new', 'FolderController@new')->name('folders.new');
 Route::post('/folders/create', 'FolderController@create')->name('folders.create');
